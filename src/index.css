@@ -1,20 +1,130 @@
+/* font-family: "Poppins", sans-serif; */
+/* font-family: "Roboto", sans-serif; */
+/* font-family: "Sacramento", cursive; */
+/* font-family: "Raleway", sans-serif; */
+
 :root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
+    --white: rgb(229, 228, 224);
+    --fadedWhite: rgba(229, 228, 224, 0.7);
+    --brightWhite: rgb(247, 247, 248);
+    --black: #0b0b0b;
+}
 
-    color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
-
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+/* For browsers that support clamp  */
+@supports (font-size: clamp(1rem, 1vi, 1rem)) {
+    :root {
+        --fs-sm: clamp(0.8rem, 0.07vi + 0.78rem, 0.84rem);
+        --fs-base: clamp(1rem, 0.19vi + 0.95rem, 1.13rem);
+        --fs-md: clamp(1.25rem, 0.38vi + 1.15rem, 1.5rem);
+        --fs-lg: clamp(1.56rem, 0.67vi + 1.39rem, 2rem);
+        --fs-xl: clamp(1.95rem, 1.09vi + 1.68rem, 2.66rem);
+        --fs-xxl: clamp(2.44rem, 1.71vi + 2.01rem, 3.55rem);
+        --fs-xxxl: clamp(3.05rem, 2.59vi + 2.4rem, 4.73rem);
+    }
+}
+/* For browsers that don't support clamp */
+@supports not (font-size: clamp(1rem, 1vi, 1rem)) {
+    :root {
+        --fs-sm: 0.8rem;
+        --fs-base: 1rem;
+        --fs-md: 1.25rem;
+        --fs-lg: 1.56rem;
+        --fs-xl: 1.95rem;
+        --fs-xxl: 2.44rem;
+        --fs-xxxl: 3.05rem;
+    }
+    @media screen and (min-width: 1440px) {
+        :root {
+            --fs-sm: 0.84rem;
+            --fs-base: 1.13rem;
+            --fs-md: 1.5rem;
+            --fs-lg: 2rem;
+            --fs-xl: 2.66rem;
+            --fs-xxl: 3.55rem;
+            --fs-xxxl: 4.73rem;
+        }
+    }
 }
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+header,
+main,
+footer {
+    padding: 20px 30px;
+
+    @media (min-width: 600px) {
+        padding: 30px 45px;
+    }
+
+    @media (min-width: 1000px) {
+        padding: 40px 60px;
+    }
+}
+
+header p {
+    font-family: "Sacramento", cursive;
+    font-size: var(--fs-lg);
+}
+
+#landing h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: var(--fs-sm);
+
+    & span:first-of-type {
+        letter-spacing: var(--fs-lg);
+    }
+
+    & span:last-of-type {
+        font-size: var(--fs-md);
+        font-family: "Raleway", sans-serif;
+        font-weight: 800;
+        letter-spacing: var(--fs-sm);
+    }
+
+    @media (min-width: 600px) {
+        & span:first-of-type {
+            letter-spacing: var(--fs-xl);
+        }
+
+        & span:last-of-type {
+            font-size: var(--fs-xl);
+            font-family: "Raleway", sans-serif;
+            font-weight: 800;
+            letter-spacing: var(--fs-base);
+        }
+    }
+
+    @media (min-width: 1000px) {
+        font-size: var(--fs-md);
+
+        & span:first-of-type {
+            letter-spacing: var(--fs-xxl);
+        }
+
+        & span:last-of-type {
+            font-size: var(--fs-xxl);
+            font-family: "Raleway", sans-serif;
+            font-weight: 800;
+            letter-spacing: var(--fs-lg);
+        }
+    }
 }
