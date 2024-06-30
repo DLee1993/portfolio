@@ -90,41 +90,55 @@ header p {
     font-size: var(--fs-sm);
 
     & span:first-of-type {
-        letter-spacing: var(--fs-lg);
+        letter-spacing: var(--fs-xl);
     }
 
     & span:last-of-type {
-        font-size: var(--fs-md);
+        font-size: var(--fs-lg);
         font-family: "Raleway", sans-serif;
         font-weight: 800;
-        letter-spacing: var(--fs-sm);
+        letter-spacing: var(--fs-base);
     }
 
     @media (min-width: 600px) {
-        & span:first-of-type {
-            letter-spacing: var(--fs-xl);
-        }
-
-        & span:last-of-type {
-            font-size: var(--fs-xl);
-            font-family: "Raleway", sans-serif;
-            font-weight: 800;
-            letter-spacing: var(--fs-base);
-        }
-    }
-
-    @media (min-width: 1000px) {
-        font-size: var(--fs-md);
+        font-size: var(--fs-base);
+        font-weight: 200;
 
         & span:first-of-type {
             letter-spacing: var(--fs-xxl);
         }
 
         & span:last-of-type {
+            font-size: var(--fs-xl);
+            letter-spacing: var(--fs-base);
+        }
+    }
+
+    @media (min-width: 800px) {
+        font-size: var(--fs-md);
+
+        & span:first-of-type {
+            letter-spacing: var(--fs-xxxl);
+        }
+
+        & span:last-of-type {
             font-size: var(--fs-xxl);
-            font-family: "Raleway", sans-serif;
-            font-weight: 800;
+            letter-spacing: var(--fs-md);
+        }
+    }
+
+    @media (min-width: 1000px) {
+        font-size: var(--fs-xl);
+
+        & span:last-of-type {
+            font-size: var(--fs-xxl);
             letter-spacing: var(--fs-lg);
+        }
+    }
+
+    @media (min-width: 1200px) {
+        & span:last-of-type {
+            font-size: var(--fs-xxxl);
         }
     }
 }
