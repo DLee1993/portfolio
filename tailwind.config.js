@@ -17,6 +17,8 @@ export default {
                 xl: "var(--fs-xl)",
                 "2xl": "var(--fs-xxl)",
                 "3xl": "var(--fs-xxxl)",
+                "4xl": "var(--fs-xxxxl)",
+                "5xl": "var(--fs-xxxxxl)",
             },
             colors: {
                 "base-white": "rgb(229, 228, 224)",

@@ -21,6 +21,8 @@
         --fs-xl: clamp(1.95rem, 1.09vi + 1.68rem, 2.66rem);
         --fs-xxl: clamp(2.44rem, 1.71vi + 2.01rem, 3.55rem);
         --fs-xxxl: clamp(3.05rem, 2.59vi + 2.4rem, 4.73rem);
+        --fs-xxxxl: clamp(3.81rem, 3.84vi + 2.85rem, 6.31rem);
+        --fs-xxxxxl: clamp(4.77rem, 5.61vi + 3.37rem, 8.41rem);
     }
 }
 /* For browsers that don't support clamp */
@@ -33,6 +35,8 @@
         --fs-xl: 1.95rem;
         --fs-xxl: 2.44rem;
         --fs-xxxl: 3.05rem;
+        --fs-xxxxl: 3.81rem;
+        --fs-xxxxxl: 4.77rem;
     }
     @media screen and (min-width: 1440px) {
         :root {
@@ -43,6 +47,8 @@
             --fs-xl: 2.66rem;
             --fs-xxl: 3.55rem;
             --fs-xxxl: 4.73rem;
+            --fs-xxxxl: 6.31rem;
+            --fs-xxxxxl: 8.41rem;
         }
     }
 }
