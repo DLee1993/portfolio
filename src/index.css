@@ -7,6 +7,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --headerHeight: 5rem;
+}
+
 /* For browsers that support clamp  */
 @supports (font-size: clamp(1rem, 1vi, 1rem)) {
     :root {
@@ -51,8 +55,16 @@ body {
     @apply bg-base-black text-base-white font-Poppins text-base;
 }
 
+body::-webkit-scrollbar {
+    @apply w-2;
+}
+
+body::-webkit-scrollbar-thumb {
+    @apply bg-base-white;
+}
+
 header,
 main,
 footer {
-    @apply p-2 sm:p-5 md:p-8 lg:p-10;
+    @apply px-2 sm:px-5 md:px-8 lg:px-10;
 }
